@@ -1,12 +1,14 @@
 import Resume from "./Resume/Resume";
 import ResumeActions from "./ResumeActions/ResumeActions";
-import "./Main.module.css";
+import styles from "./Main.module.css";
 
 export default function Main() {
   return (
-    <main>
-      <div className="cv-container">
-        <Resume />
+    <main className={styles.main}>
+      <div className={styles["cv-bg"]}>
+        <div className={styles["cv-container"]}>
+          <Resume />
+        </div>
         <ResumeActions />
       </div>
     </main>

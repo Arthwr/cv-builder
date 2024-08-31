@@ -1,3 +1,5 @@
+import styles from "./AccentColor.module.css";
+
 export default function AccentColor() {
-  return <></>;
+  return <div className={styles.accent}></div>;
 }

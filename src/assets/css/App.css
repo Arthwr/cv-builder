@@ -1,7 +1,11 @@
 :root {
-  font-family: "source_sans_proregular", "system-ui", "sans-serif";
+  --text-main: #2e3d50;
   --bg-main: #fafafa;
-  --bg-outer: #f3f4f6;
+  --outer-cv: #e2e8f0;
+  --main-cv: #ffffff;
+  --accent-blue: #3c78d8;
+  color: var(--text-main);
+  font-family: "source_sans_proregular", "system-ui", "sans-serif";
 }
 
 body {
@@ -11,6 +15,7 @@ body {
 }
 
 #root {
-  max-width: 2000px;
+  padding: 0 2rem;
+  max-width: 1440px;
   margin: 0 auto;
 }
