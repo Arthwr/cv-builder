@@ -1,7 +1,14 @@
-import "./assets/styles/App.css";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import "./assets/css/App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }
 
 export default App;

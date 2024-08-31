@@ -1,0 +1,9 @@
+header {
+  padding-top: 2em;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 auto;
+  width: fit-content;
+}

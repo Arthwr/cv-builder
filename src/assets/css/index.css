@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "source_sans_proSBdIt";
+  src: url("/fonts/sourcesanspro-semiboldit-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-semiboldit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_prosemibold";
+  src: url("/fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url("/fonts/sourcesanspro-regular-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_prolight_italic";
+  src: url("/fonts/sourcesanspro-lightit-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-lightit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_prolight";
+  src: url("/fonts/sourcesanspro-light-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_proitalic";
+  src: url("/fonts/sourcesanspro-it-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-it-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_proXLtIt";
+  src: url("/fonts/sourcesanspro-extralightit-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-extralightit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_proextralight";
+  src: url("/fonts/sourcesanspro-extralight-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_probold_italic";
+  src: url("/fonts/sourcesanspro-boldit-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-boldit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_probold";
+  src: url("/fonts/sourcesanspro-bold-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_problack_italic";
+  src: url("/fonts/sourcesanspro-blackit-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-blackit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "source_sans_problack";
+  src: url("/fonts/sourcesanspro-black-webfont.woff2") format("woff2"),
+    url("/fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul {
+  list-style: none;
+}
+
+ul,
+li {
+  padding: 0;
+}
+
+/* Screen readers classes*/
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
