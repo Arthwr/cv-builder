@@ -4,6 +4,7 @@
   --outer-cv: #e2e8f0;
   --main-cv: #ffffff;
   --accent-blue: #3c78d8;
+  --line-break: #d9d9d9;
   color: var(--text-main);
   font-family: "source_sans_proregular", "system-ui", "sans-serif";
 }

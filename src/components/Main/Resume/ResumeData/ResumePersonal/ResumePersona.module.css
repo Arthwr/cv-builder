@@ -4,3 +4,32 @@
   font-weight: 700;
   font-size: 2rem;
 }
+
+.name::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 75%;
+  background-color: var(--line-break);
+  margin: 0.5em 0 1em;
+}
+
+.personal ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.personal li {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.city::after {
+  content: ",";
+}
+
+.svg {
+  height: 1rem;
+  width: auto;
+}
