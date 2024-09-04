@@ -3,6 +3,7 @@ header {
 }
 
 h1 {
+  text-align: right;
+  color: var(--text-head);
   font-size: 3rem;
-  width: fit-content;
 }
