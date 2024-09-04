@@ -1,9 +1,0 @@
-.bullets {
-  display: flex;
-  padding-left: 1rem;
-  flex-direction: column;
-  gap: 0.25rem;
-  max-width: 120ch;
-  margin-top: 0.5rem;
-  list-style-type: disc;
-}

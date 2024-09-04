@@ -16,10 +16,14 @@ body {
   height: 100vh;
 }
 
-#root {
-  padding: 0 2rem;
-  max-width: 1440px;
-  margin: 0 auto;
+header {
+  padding-top: 2em;
+}
+
+h1 {
+  text-align: right;
+  color: var(--text-head);
+  font-size: 3rem;
 }
 
 h3 {
@@ -29,6 +33,72 @@ h3 {
   text-transform: uppercase;
 }
 
+main {
+  margin: 2rem auto;
+}
+
+#root {
+  padding: 0 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Container */
+.cv-bg {
+  padding: 1.5rem;
+  background-color: var(--outer-cv);
+}
+
+.cv-container {
+  background-color: var(--main-cv);
+}
+
+/* Accent Color */
+.accent {
+  padding-bottom: 3rem;
+  border-style: solid;
+  border-width: 1rem 0 0 0;
+  border-color: var(--accent-blue);
+  transition-property: border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Personal */
+.name {
+  text-transform: capitalize;
+  font-family: "source_sans_probold", "system-ui", "sans-serif";
+  text-align: left;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.name::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 75%;
+  background-color: var(--line-break);
+  margin: 0.5em 0 1em;
+}
+
+.personal ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.personal li {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.svg {
+  height: 1rem;
+  width: auto;
+}
+
+/* Experience & Education */
 .summary,
 .summary-edu {
   display: flex;
@@ -36,7 +106,7 @@ h3 {
 }
 
 .summary {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-family: "source_sans_probold", "system-ui", "sans-serif";
   font-weight: 700;
   font-size: 1.25rem;
@@ -49,4 +119,20 @@ h3 {
 .summary-edu li:not(:first-child)::before,
 .summary li:not(:first-child)::before {
   content: "| ";
+}
+
+.education,
+.experience,
+.coursework {
+  margin-top: 2rem;
+}
+
+.bullets {
+  display: flex;
+  padding-left: 1rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 120ch;
+  margin-top: 0.5rem;
+  list-style-type: disc;
 }
