@@ -1,26 +1,28 @@
+import data from "@data/mockData";
 import styles from "./ResumePersona.module.css";
 
 export default function ResumePersonal() {
+  const { name, location, email, phone, linkedin } = data.personal;
+
   return (
     <div className={styles.personal}>
-      <h2 className={styles.name}>Arthur Bloomberg</h2>
+      <h2 className={styles.name}>{name}</h2>
       <ul>
         <li>
           <img className={styles.svg} src="/icons/map-marker.svg" alt="Location icon" />
-          <span className={styles.city}>New York City</span>
-          <span>United States</span>
+          <span className={styles.city}>{location}</span>
         </li>
         <li>
           <img className={styles.svg} src="/icons/email.svg" alt="Email icon" />
-          <span>arthurbloomberg@gmail.com</span>
+          <span>{email}</span>
         </li>
         <li>
           <img className={styles.svg} src="/icons/cellphone.svg" alt="Mobile phone icon" />
-          <span>01062375053</span>
+          <span>{phone}</span>
         </li>
         <li>
           <img className={styles.svg} src="/icons/linkedin.svg" alt="LinkedIn icon" />
-          <span>in/bloomberg</span>
+          <span>{linkedin}</span>
         </li>
       </ul>
     </div>
