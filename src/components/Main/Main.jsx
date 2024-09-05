@@ -5,9 +5,7 @@ export default function Main() {
   return (
     <main>
       <div className="cv-bg">
-        <div className="cv-container">
-          <Resume />
-        </div>
+        <Resume />
         <ResumeActions />
       </div>
     </main>

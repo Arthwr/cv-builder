@@ -6,6 +6,7 @@ export default function ResumePersonal() {
   return (
     <div className="personal">
       <h2 className="name">{name}</h2>
+      <div className="line-br"></div>
       <ul>
         <li>
           <img className="svg" src="/icons/map-marker.svg" alt="Location icon" />

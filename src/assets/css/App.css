@@ -23,12 +23,11 @@ header {
 h1 {
   text-align: right;
   color: var(--text-head);
-  font-size: 3rem;
 }
 
 h3 {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-family: "source_sans_prosemibold", "system-ui", "sans-serif";
   text-transform: uppercase;
 }
@@ -49,16 +48,21 @@ main {
   background-color: var(--outer-cv);
 }
 
-.cv-container {
-  padding-bottom: 3rem;
+#resume {
   background-color: var(--main-cv);
+}
+
+.resume-data-container {
+  padding-top: 1.3cm;
+  padding-bottom: 1.3cm;
+  padding-left: 1.4cm;
+  padding-right: 1.4cm;
 }
 
 /* Accent Color */
 .accent {
-  padding-bottom: 3rem;
   border-style: solid;
-  border-width: 1rem 0 0 0;
+  border-width: 12px 0 0 0;
   border-color: var(--accent-blue);
   transition-property: border-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,16 +75,15 @@ main {
   font-family: "source_sans_probold", "system-ui", "sans-serif";
   text-align: left;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.1em;
 }
 
-.name::after {
+.line-br {
   display: block;
-  content: "";
   height: 2px;
   width: 75%;
   background-color: var(--line-break);
-  margin: 0.5em 0 1em;
+  margin: 0.5em 0 1.2em;
 }
 
 .personal ul {
@@ -95,15 +98,14 @@ main {
 }
 
 .svg {
-  height: 1rem;
-  width: auto;
+  height: auto;
+  width: 1em;
 }
 
 /* Experience & Education */
 .summary,
 .summary-edu {
   display: flex;
-  gap: 0.5rem;
 }
 
 .summary {
@@ -119,19 +121,21 @@ main {
 
 .summary-edu li:not(:first-child)::before,
 .summary li:not(:first-child)::before {
-  content: "| ";
+  margin-left: 0.35em;
+  margin-right: 0.35em;
+  content: "|";
 }
 
 .education,
 .experience,
 .coursework,
 .skills {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .bullets {
   display: flex;
-  padding-left: 1rem;
+  padding-left: 1em;
   flex-direction: column;
   gap: 0.25rem;
   max-width: 120ch;
@@ -163,4 +167,99 @@ main {
 
 .skills > div {
   white-space: pre-line;
+}
+
+@media print {
+  @page {
+    size: A4;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  #root,
+  main,
+  .cv-bg {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  #resume {
+    min-height: 11in;
+    font-size: 16px;
+    line-height: 1.85;
+    width: 8.5in;
+    padding-bottom: 1.3cm;
+  }
+
+  .name {
+    font-size: 1.7em;
+  }
+
+  .line-br {
+    margin-bottom: 0.85em;
+  }
+
+  .bullets {
+    gap: 0;
+  }
+
+  .personal li {
+    font-weight: 400;
+  }
+
+  .svg {
+    color: var(--text-main);
+    height: 0.85em;
+    width: auto;
+  }
+
+  h3 {
+    font-size: 0.85em;
+  }
+
+  .summary,
+  .summary-edu {
+    font-size: 9.5pt;
+  }
+
+  li,
+  .bullets,
+  .skills > div {
+    font-size: 0.85em;
+  }
+
+  ul,
+  li {
+    gap: 0;
+    padding: 0;
+  }
+
+  .experience {
+    margin-top: 1em;
+  }
+
+  .education,
+  .coursework,
+  .skills {
+    margin-top: 0.45em;
+  }
+
+  .coursework ul,
+  .skills div,
+  .bullets,
+  .summary-edu,
+  .summary {
+    margin-top: 0;
+  }
+
+  .coursework ul {
+    margin-top: 0;
+  }
+
+  .summary {
+    margin: 0;
+  }
 }

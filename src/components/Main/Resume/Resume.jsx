@@ -1,13 +1,12 @@
 import AccentColor from "./AccentColor/AccentColor";
 import ResumeData from "./ResumeData/ResumeData";
-import styles from "./Resume.module.css";
 
 export default function Resume() {
   return (
     <>
-      <div>
+      <div id="resume">
         <AccentColor />
-        <div className={styles["resume-data-container"]}>
+        <div className="resume-data-container">
           <ResumeData />
         </div>
       </div>
