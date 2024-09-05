@@ -79,6 +79,18 @@ const data = {
       year: "2015",
     },
   ],
+  coursework: [
+    { id: 1, title: "Distributed Systems" },
+    { id: 2, title: "Deep Learning" },
+    { id: 3, title: "Pattern Recognition Theory" },
+    { id: 4, title: "Data Structures" },
+    { id: 5, title: "Machine Learning" },
+    { id: 6, title: "Data Science" },
+    { id: 7, title: "Web Application Development" },
+    { id: 8, title: "Principles of Software Systems Construction" },
+  ],
+  skills: `Programming Languages: Python, Java, C, C++, Go, JavaScript, TypeScript Software\nTools/Frameworks: Git, AWS, Jira, Django, HTML/CSS, MATLAB, React, Node.js, MongoDB
+`,
 };
 
 export default data;

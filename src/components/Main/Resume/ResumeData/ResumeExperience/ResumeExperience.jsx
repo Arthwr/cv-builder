@@ -5,8 +5,8 @@ export default function ResumeExperience() {
   return (
     <div className="experience">
       <h3>Experience</h3>
-      {data.experience.map((data) => (
-        <ExperienceCard key={data.id} data={data} />
+      {data.experience.map((item) => (
+        <ExperienceCard key={item.id} data={item} />
       ))}
     </div>
   );

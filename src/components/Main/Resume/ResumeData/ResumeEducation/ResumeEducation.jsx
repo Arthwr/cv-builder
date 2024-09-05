@@ -5,8 +5,8 @@ export default function ResumeEducation() {
   return (
     <div className="education">
       <h3>Education</h3>
-      {data.education.map((data) => (
-        <EducationCard key={data.id} data={data} />
+      {data.education.map((item) => (
+        <EducationCard key={item.id} data={item} />
       ))}
     </div>
   );

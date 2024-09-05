@@ -50,6 +50,7 @@ main {
 }
 
 .cv-container {
+  padding-bottom: 3rem;
   background-color: var(--main-cv);
 }
 
@@ -123,7 +124,8 @@ main {
 
 .education,
 .experience,
-.coursework {
+.coursework,
+.skills {
   margin-top: 2rem;
 }
 
@@ -135,4 +137,30 @@ main {
   max-width: 120ch;
   margin-top: 0.5rem;
   list-style-type: disc;
+}
+
+/* Coursework & Skills */
+.coursework ul,
+.skills div {
+  margin-top: 0.5rem;
+  max-width: 120ch;
+}
+
+.coursework li {
+  display: inline;
+  font-family: "source_sans_semibold", "system-ui", "sans-serif";
+  font-weight: 600;
+}
+
+.coursework li:not(:last-child):after {
+  content: ",";
+  margin-right: 0.25rem;
+}
+
+.coursework li:last-child::after {
+  content: ".";
+}
+
+.skills > div {
+  white-space: pre-line;
 }
