@@ -33,7 +33,7 @@ h3 {
 }
 
 main {
-  margin: 2rem auto;
+  margin: 1.25rem auto;
 }
 
 #root {
@@ -168,6 +168,39 @@ main {
   white-space: pre-line;
 }
 
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 1rem;
+}
+
+.actions > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #3f5a78;
+  border: 1px solid #3498db;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.2);
+  transform: translateY(-1px);
+}
+
 @media print {
   @page {
     size: A4;
@@ -249,8 +282,7 @@ main {
 
   .coursework ul,
   .skills div,
-  .education-info
-  .summary {
+  .education-info .summary {
     margin-top: 0;
   }
 

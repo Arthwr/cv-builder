@@ -1,3 +1,7 @@
 export default function ResumeActions() {
-  return <></>;
+  return (
+    <div className="actions">
+      <button id="pdf">Download PDF</button>
+    </div>
+  );
 }

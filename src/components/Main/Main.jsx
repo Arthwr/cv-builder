@@ -4,9 +4,9 @@ import ResumeActions from "./ResumeActions/ResumeActions";
 export default function Main() {
   return (
     <main>
+      <ResumeActions />
       <div className="cv-bg">
         <Resume />
-        <ResumeActions />
       </div>
     </main>
   );
