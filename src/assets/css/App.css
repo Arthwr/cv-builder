@@ -134,12 +134,21 @@ main {
 
 .bullets {
   display: flex;
-  padding-left: 1em;
   flex-direction: column;
   gap: 0.25rem;
   max-width: 120ch;
   margin-top: 0.5rem;
-  list-style-type: disc;
+  list-style-type: none;
+}
+
+.bullets li {
+  margin-left: 1rem;
+  text-indent: -14px;
+}
+
+.bullets li::before {
+  content: "•";
+  padding-right: 10px;
 }
 
 /* Coursework & Skills */
@@ -151,7 +160,7 @@ main {
 
 .coursework li {
   display: inline;
-  font-family: "source_sans_semibold", "system-ui", "sans-serif";
+  font-family: "source_sans_prosemibold", "system-ui", "sans-serif";
   font-weight: 600;
 }
 
@@ -241,12 +250,6 @@ button:hover {
   .personal li {
     font-size: 0.7em;
     font-weight: 400;
-  }
-
-  .svg {
-    color: var(--text-main);
-    height: 0.85em;
-    width: auto;
   }
 
   h3 {

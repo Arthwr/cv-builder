@@ -1,0 +1,92 @@
+.print-mode #resume {
+  min-height: 11in;
+  font-size: 16px;
+  line-height: 1.85;
+  width: 8.5in;
+  padding-bottom: 1.3cm;
+}
+
+.print-mode {
+  #root,
+  main,
+  .cv-bg {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .name {
+    font-size: 1.7em;
+  }
+
+  .line-br {
+    margin-bottom: 0.85em;
+  }
+
+  .bullets {
+    gap: 0;
+  }
+
+  .personal li {
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+
+  .personal span {
+    margin: -14px 6px 0 6px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .summary,
+  .education-info {
+    font-size: 0.85em;
+  }
+
+  li,
+  .bullets,
+  .skills > div {
+    font-size: 0.85em;
+  }
+
+  ul,
+  li {
+    gap: 0;
+    padding: 0;
+  }
+
+  .experience {
+    margin-top: 1.15em;
+  }
+
+  .coursework li {
+    font-weight: 500;
+  }
+
+  .education,
+  .coursework,
+  .skills {
+    margin-top: 0.85em;
+  }
+
+  .coursework ul,
+  .skills div,
+  .education-info .summary {
+    margin-top: 0;
+  }
+
+  .bullets {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+
+  .coursework ul {
+    margin-top: 0;
+  }
+
+  .summary {
+    margin-top: 0.25em;
+  }
+}
