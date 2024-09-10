@@ -26,7 +26,7 @@ export default function ResumeActions() {
 
   return (
     <div className="actions no-print">
-      <button id="pdf" onClick={generatePDF}>
+      <button id="pdf" onClick={generatePDF} aria-label="download pdf">
         Download PDF
       </button>
     </div>

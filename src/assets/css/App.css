@@ -177,6 +177,48 @@ main {
   white-space: pre-line;
 }
 
+/* Edit button */
+.resume-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+}
+
+.resume-container > div {
+  transition: transform 0.3s ease-in;
+  transition-delay: 400ms;
+}
+
+.edit {
+  left: -50px;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  transition-delay: 400ms;
+}
+
+.resume-container:hover .edit:active {
+  color: #7392b7;
+  transform: translateX(50px) scale(1.1);
+}
+
+.resume-container:hover .edit {
+  transform: translateX(50px);
+  opacity: 1;
+  transition-delay: 0ms;
+}
+
+.resume-container:hover > div {
+  transform: translateX(50px);
+  transition-delay: 0ms;
+}
+
 /* Actions */
 .actions {
   display: flex;
@@ -193,16 +235,15 @@ main {
   font-weight: 500;
   line-height: 1.25rem;
   padding: 0.5rem 1rem;
-  outline: none;
   cursor: pointer;
-  background-color: #7392B7;
+  background-color: #7392b7;
   color: #ffffff;
   border: none;
   border-radius: 4px;
-  transition: outline 0.3s ease, box-shadow 0.3s ease, background-color 0.3s
+  transition: outline 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
 }
 
-button:hover {
+.actions > button:hover {
   outline: 2px solid transparent;
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3498db;
   background-color: #3498db;
