@@ -6,6 +6,9 @@
   --main-cv: #ffffff;
   --accent-blue: #3c78d8;
   --line-break: #d9d9d9;
+  --bg-form: #dcdcdc;
+  --button: #7392b7;
+  --button-highlight: #3498db;
   color: var(--text-main);
   font-family: "source_sans_proregular", "system-ui", "sans-serif";
 }
@@ -43,7 +46,7 @@ main {
 }
 
 /* Container */
-.cv-bg {
+.resume-background {
   padding: 1.5rem;
   background-color: var(--outer-cv);
 }
@@ -52,7 +55,7 @@ main {
   background-color: var(--main-cv);
 }
 
-.resume-data-container {
+.resume-group {
   padding-top: 1.3cm;
   padding-bottom: 1.3cm;
   padding-left: 1.4cm;
@@ -191,6 +194,7 @@ main {
 }
 
 .edit {
+  display: none;
   position: absolute;
   left: 0;
   transform: translateX(-100%);
@@ -203,6 +207,10 @@ main {
   background: transparent;
   transition: opacity 0.3s ease-in, transform 0.3s ease-in;
   transition-delay: 400ms;
+}
+
+.resume-container.active .edit {
+  display: block;
 }
 
 .resume-container.active:hover .edit:active {
@@ -229,7 +237,8 @@ main {
   margin-bottom: 1rem;
 }
 
-.actions > button {
+.actions > button,
+.form-actions > button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -239,18 +248,61 @@ main {
   line-height: 1.25rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  background-color: #7392b7;
+  background-color: var(--button);
   color: #ffffff;
   border: none;
   border-radius: 4px;
   transition: outline 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
 }
 
-.actions > button:hover {
+.actions > button:hover,
+.form-actions > button:hover {
   outline: 2px solid transparent;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3498db;
-  background-color: #3498db;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--button-highlight);
+  background-color: var(--button-highlight);
   color: white;
+}
+
+/* Resume Form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--outer-cv);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+form > label {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input {
+  padding: 0.25rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-self: flex-end;
+}
+
+.editing {
+  display: block;
+}
+
+.viewing {
+  display: flex;
 }
 
 /* Switch slider */
@@ -324,7 +376,7 @@ main {
 
   #root,
   main,
-  .cv-bg {
+  .resume-background {
     padding: 0;
     margin: 0;
     background-color: transparent;

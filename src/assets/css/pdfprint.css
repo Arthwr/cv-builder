@@ -9,10 +9,14 @@
 .print-mode {
   #root,
   main,
-  .cv-bg {
+  .resume-background {
     padding: 0;
     margin: 0;
     background-color: transparent;
+  }
+
+  .no-print {
+    display: none;
   }
 
   .name {

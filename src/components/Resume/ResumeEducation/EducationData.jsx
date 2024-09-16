@@ -1,11 +1,10 @@
 import EducationCard from "./EducationCard/EducationCard";
-import data from "@data/mockData";
 
-export default function ResumeEducation() {
+export default function EducationData({ educationData }) {
   return (
     <div className="education">
       <h3>Education</h3>
-      {data.education.map((item) => (
+      {educationData.map((item) => (
         <EducationCard key={item.id} data={item} />
       ))}
     </div>

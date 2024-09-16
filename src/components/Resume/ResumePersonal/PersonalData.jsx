@@ -1,7 +1,5 @@
-import data from "@data/mockData";
-
-export default function ResumePersonal() {
-  const { name, location, email, phone, linkedin } = data.personal;
+export default function PersonalData({ userData }) {
+  const { name, location, email, phone, linkedin } = userData;
 
   return (
     <div className="personal">

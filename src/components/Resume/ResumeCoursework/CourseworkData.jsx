@@ -1,11 +1,9 @@
-import data from "@data/mockData";
-
-export default function ResumeCoursework() {
+export default function CourseworkData({ coureworkData }) {
   return (
     <div className="coursework">
       <h3>Coursework</h3>
       <ul>
-        {data.coursework.map((item) => (
+        {coureworkData.map((item) => (
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>
