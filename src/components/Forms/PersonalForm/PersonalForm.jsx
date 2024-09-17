@@ -2,17 +2,8 @@ import { useState } from "react";
 import PersonalFormActions from "./PersonalFormActions";
 import PersonalFormInput from "./PersonalFormInput";
 
-const initialFormState = {
-  firstName: "",
-  lastName: "",
-  location: "",
-  email: "",
-  phone: "",
-  linkedin: "",
-};
-
-export default function PersonalForm({ onCancel, onSubmit }) {
-  const [form, setForm] = useState(initialFormState);
+export default function PersonalForm({ onCancel, onSubmit, formInfo }) {
+  const [form, setForm] = useState(formInfo);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -23,7 +14,14 @@ export default function PersonalForm({ onCancel, onSubmit }) {
   };
 
   const handleClear = () => {
-    setForm(initialFormState);
+    setForm({
+      firstName: "",
+      lastName: "",
+      location: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+    });
   };
 
   return (

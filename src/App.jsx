@@ -17,6 +17,5 @@ function App() {
 // 3. change accent color
 // 4. add forms and useState react for content change
 // 5. remove unecessary folder nesting
-// 6. turn resume-container in a custom component
 // 7. clean up import statements and utilize "@import statements"
 export default App;

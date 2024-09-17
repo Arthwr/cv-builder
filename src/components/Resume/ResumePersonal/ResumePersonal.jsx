@@ -21,7 +21,7 @@ export default function ResumePersonal({ isEditMode }) {
   return (
     <>
       {isFormOpen ? (
-        <PersonalForm onCancel={toggleForm} onSubmit={handleSubmit} />
+        <PersonalForm onCancel={toggleForm} onSubmit={handleSubmit} formInfo={formInfo} />
       ) : (
         <ResumeContainer isEditMode={isEditMode}>
           <ToggleFormButton onClick={toggleForm} />
