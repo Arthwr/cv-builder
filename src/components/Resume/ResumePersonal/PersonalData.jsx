@@ -1,9 +1,9 @@
 export default function PersonalData({ userData }) {
-  const { name, location, email, phone, linkedin } = userData;
+  const { firstName, lastName, location, email, phone, linkedin } = userData;
 
   return (
     <div className="personal">
-      <h2 className="name">{name}</h2>
+      <h2 className="name">{`${firstName} ${lastName}`}</h2>
       <div className="line-br"></div>
       <ul>
         <li>

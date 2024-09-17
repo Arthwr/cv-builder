@@ -265,29 +265,32 @@ main {
 
 /* Resume Form */
 .form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   background-color: var(--outer-cv);
-  padding: 1.5rem;
   margin: 1rem 0;
 }
 
-form {
+#personal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.personal-input {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   width: 100%;
 }
 
-form > label {
+.personal-input > label {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-form input {
+.personal-input input {
   padding: 0.25rem;
 }
 

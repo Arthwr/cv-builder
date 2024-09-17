@@ -1,9 +1,9 @@
-export default function PersonalFormActions({ onCancel }) {
+export default function PersonalFormActions({ onCancel, onClear }) {
   return (
     <div className="form-actions">
-      <button>Clear</button>
+      <button onClick={onClear}>Clear</button>
       <button onClick={onCancel}>Cancel</button>
-      <button>Save</button>
+      <button type="submit">Save</button>
     </div>
   );
 }

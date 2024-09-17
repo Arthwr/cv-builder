@@ -1,30 +1,39 @@
-export default function PersonalForm() {
+import { useState } from "react";
+import PersonalFormActions from "./PersonalFormActions";
+import PersonalFormInput from "./PersonalFormInput";
+
+const initialFormState = {
+  firstName: "",
+  lastName: "",
+  location: "",
+  email: "",
+  phone: "",
+  linkedin: "",
+};
+
+export default function PersonalForm({ onCancel, onSubmit }) {
+  const [form, setForm] = useState(initialFormState);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [id]: value,
+    }));
+  };
+
+  const handleClear = () => {
+    setForm(initialFormState);
+  };
+
   return (
-    <form>
-      <label htmlFor="firstName">
-        <span>First Name:</span>
-        <input type="text" id="firstName" />
-      </label>
-      <label htmlFor="lastName">
-        <span>Last Name:</span>
-        <input type="text" id="lastName" />
-      </label>
-      <label htmlFor="location">
-        <span>Location:</span>
-        <input type="text" id="location" />
-      </label>
-      <label htmlFor="email">
-        <span>Email:</span>
-        <input type="email" id="email" />
-      </label>
-      <label htmlFor="phone">
-        <span>Telephone number:</span>
-        <input type="tel" id="phone" />
-      </label>
-      <label htmlFor="linkedin">
-        <span>Linkedin:</span>
-        <input type="text" id="linkedin" />
-      </label>
-    </form>
+    <>
+      <div className="form-container no print">
+        <form id="personal-form" onSubmit={onSubmit}>
+          <PersonalFormInput onChange={handleChange} formState={form} />
+          <PersonalFormActions onCancel={onCancel} onClear={handleClear} />
+        </form>
+      </div>
+    </>
   );
 }
