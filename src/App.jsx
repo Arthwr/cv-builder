@@ -18,4 +18,6 @@ function App() {
 // 4. add forms and useState react for content change
 // 5. remove unecessary folder nesting
 // 7. clean up import statements and utilize "@import statements"
+// 8. implement correct key assignment to mapped out elements in Experience form preview form
+// 9. unify cancel bullet section button and edit bullet section button in a separate component.
 export default App;

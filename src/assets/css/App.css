@@ -180,7 +180,7 @@ main {
   white-space: pre-line;
 }
 
-/* Edit button */
+/* toggle-form button */
 .resume-container {
   display: flex;
   align-items: center;
@@ -193,7 +193,7 @@ main {
   transition-delay: 400ms;
 }
 
-.edit {
+.toggle-form {
   display: none;
   position: absolute;
   left: 0;
@@ -209,16 +209,16 @@ main {
   transition-delay: 400ms;
 }
 
-.resume-container.active .edit {
+.resume-container.active .toggle-form {
   display: block;
 }
 
-.resume-container.active:hover .edit:active {
+.resume-container.active:hover .toggle-form:active {
   color: #7392b7;
   transform: scale(1.1);
 }
 
-.resume-container.active:hover .edit {
+.resume-container.active:hover .toggle-form {
   transform: translateX(0px);
   opacity: 1;
   transition-delay: 0ms;
@@ -229,7 +229,7 @@ main {
   transition-delay: 0ms;
 }
 
-/* Actions */
+/* Personal Form Actions */
 .actions {
   display: flex;
   justify-content: space-between;
@@ -269,7 +269,7 @@ main {
   margin: 1rem 0;
 }
 
-#personal-form {
+.form-wrapper > form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -300,12 +300,63 @@ main {
   align-self: flex-end;
 }
 
-.editing {
-  display: block;
+/* Experience Table Section */
+table {
+  width: 100%;
+  height: min-content;
+  border-collapse: collapse;
+  border: none;
 }
 
-.viewing {
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding-left: clamp(10px, 2vw + 1rem, 20px);
+  padding-right: clamp(10px, 2vw + 1rem, 20px);
+}
+
+th {
+  font-family: "source_sans_prosemibold", "system-ui", "sans-serif";
+  font-weight: 500;
+  background-color: rgb(235, 235, 235);
+}
+
+td {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.table-actions {
   display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: inherit;
+  border: none;
+  gap: 0.5rem;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.table-actions > * {
+  flex-shrink: 0;
+}
+
+.edit-bullet-section {
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.edit-bullet-section:hover svg.svg-edit {
+  transform: scale(1.1);
+  path {
+    fill: var(--button);
+  }
 }
 
 /* Switch slider */
@@ -366,6 +417,12 @@ main {
 
 .switch-input:checked + .switch-slider::before {
   transform: translateX(21px);
+}
+
+@media screen and (max-width: 1025px) {
+  .form-wrapper > form {
+    padding: 1rem;
+  }
 }
 
 @media print {

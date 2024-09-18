@@ -1,6 +1,5 @@
 export default function ExperienceCard({ data }) {
   const { position, company, location, period } = data.summary;
-  const { bullets } = data;
 
   return (
     <>
@@ -11,7 +10,7 @@ export default function ExperienceCard({ data }) {
         <li>{period}</li>
       </ul>
       <ul className="bullets">
-        {bullets.map((point, index) => (
+        {data.bullets.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
       </ul>

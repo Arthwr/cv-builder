@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PersonalFormActions from "./PersonalFormActions";
 import PersonalFormInput from "./PersonalFormInput";
+import FormContainer from "@components/SharedComponents/FormContainer";
 
 export default function PersonalForm({ onCancel, onSubmit, formInfo }) {
   const [form, setForm] = useState(formInfo);
@@ -25,13 +26,11 @@ export default function PersonalForm({ onCancel, onSubmit, formInfo }) {
   };
 
   return (
-    <>
-      <div className="form-container no print">
-        <form id="personal-form" onSubmit={onSubmit}>
-          <PersonalFormInput onChange={handleChange} formState={form} />
-          <PersonalFormActions onCancel={onCancel} onClear={handleClear} />
-        </form>
-      </div>
-    </>
+    <FormContainer>
+      <form id="personal-form" onSubmit={onSubmit}>
+        <PersonalFormInput onChange={handleChange} formState={form} />
+        <PersonalFormActions onCancel={onCancel} onClear={handleClear} />
+      </form>
+    </FormContainer>
   );
 }
