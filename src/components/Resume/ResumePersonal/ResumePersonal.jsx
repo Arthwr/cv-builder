@@ -1,8 +1,9 @@
 import { useState } from "react";
 import useToggleForm from "@hooks/useToggleForm";
 import PersonalForm from "@components/Forms/PersonalForm/PersonalForm";
-import ToggleFormButton from "@components/SharedComponents/ToggleFormButton";
 import ResumeContainer from "@components/SharedComponents/ResumeContainer";
+import SectionButton from "@components/SharedComponents/SectionButton";
+import toggleFormIcon from "@assets/icons/toggleFormIcon.svg"
 import PersonalData from "./PersonalData";
 import data from "@data/mockData";
 
@@ -24,7 +25,7 @@ export default function ResumePersonal({ isEditMode }) {
         <PersonalForm onCancel={toggleForm} onSubmit={handleSubmit} formInfo={formInfo} />
       ) : (
         <ResumeContainer isEditMode={isEditMode}>
-          <ToggleFormButton onClick={toggleForm} />
+          <SectionButton iconUrl={toggleFormIcon} className={"toggle-icon"} label={"toggle form"} onClick={toggleForm} />
           <PersonalData userData={formInfo} />
         </ResumeContainer>
       )}

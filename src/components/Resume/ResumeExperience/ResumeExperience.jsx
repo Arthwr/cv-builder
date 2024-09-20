@@ -1,9 +1,10 @@
 import { useState } from "react";
 import useToggleForm from "@hooks/useToggleForm";
 import ResumeContainer from "@components/SharedComponents/ResumeContainer";
-import ToggleFormButton from "@components/SharedComponents/ToggleFormButton";
-import ExperienceData from "./ExperienceData";
 import ExperienceForm from "@components/Forms/ExperienceForm/ExperienceForm";
+import SectionButton from "@components/SharedComponents/SectionButton";
+import toggleFormIcon from "@assets/icons/toggleFormIcon.svg"
+import ExperienceData from "./ExperienceData";
 import data from "@data/mockData";
 
 export default function ResumeExperience({ isEditMode }) {
@@ -16,7 +17,7 @@ export default function ResumeExperience({ isEditMode }) {
         <ExperienceForm formInfo={formInfo} onCancel={toggleForm} />
       ) : (
         <ResumeContainer isEditMode={isEditMode}>
-          <ToggleFormButton onClick={toggleForm} />
+          <SectionButton iconUrl={toggleFormIcon} className={"toggle-icon"} label={"toggle form"} onClick={toggleForm} />
           <ExperienceData experienceData={formInfo} />
         </ResumeContainer>
       )}

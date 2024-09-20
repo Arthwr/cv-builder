@@ -193,7 +193,7 @@ main {
   transition-delay: 400ms;
 }
 
-.toggle-form {
+.toggle-icon {
   display: none;
   position: absolute;
   left: 0;
@@ -209,16 +209,18 @@ main {
   transition-delay: 400ms;
 }
 
-.resume-container.active .toggle-form {
+.resume-container.active .toggle-icon {
   display: block;
+  filter: brightness(0) saturate(100%) invert(0) sepia(100%) hue-rotate(180deg) brightness(85%) contrast(90%);
 }
 
-.resume-container.active:hover .toggle-form:active {
-  color: #7392b7;
+.resume-container.active:hover .toggle-icon:active {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(46%) saturate(376%) hue-rotate(161deg) brightness(95%)
+    contrast(85%);
   transform: scale(1.1);
 }
 
-.resume-container.active:hover .toggle-form {
+.resume-container.active:hover .toggle-icon {
   transform: translateX(0px);
   opacity: 1;
   transition-delay: 0ms;
@@ -229,6 +231,9 @@ main {
   transition-delay: 0ms;
 }
 
+.will-change {
+  will-change: opacity, transform;
+}
 /* Personal Form Actions */
 .actions {
   display: flex;
@@ -342,7 +347,7 @@ td {
   flex-shrink: 0;
 }
 
-.edit-bullet-section {
+.action-icon {
   cursor: pointer;
   border: none;
   margin: 0;
@@ -352,11 +357,14 @@ td {
   transition: 0.3s;
 }
 
-.edit-bullet-section:hover svg.svg-edit {
+.action-icon img.svg-edit {
+  filter: brightness(0) saturate(100%) invert(0) sepia(100%) hue-rotate(180deg) brightness(85%) contrast(90%);
+}
+
+.action-icon:hover img.svg-edit {
   transform: scale(1.1);
-  path {
-    fill: var(--button);
-  }
+  filter: brightness(0) saturate(100%) invert(45%) sepia(46%) saturate(376%) hue-rotate(161deg) brightness(95%)
+    contrast(85%);
 }
 
 /* Switch slider */

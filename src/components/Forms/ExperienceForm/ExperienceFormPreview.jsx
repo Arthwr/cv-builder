@@ -1,5 +1,6 @@
-import CancelButtonSectionButtons from "@components/SharedComponents/CancelBulletSectionButton";
-import EditBulletSectionButton from "@components/SharedComponents/EditBulletSectionButton";
+import SectionButton from "@components/SharedComponents/SectionButton";
+import editIconUrl from "@assets/icons/editSectionIcon.svg";
+import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
 
 export default function ExperienceFormPreview({ formInfo }) {
   return (
@@ -23,8 +24,8 @@ export default function ExperienceFormPreview({ formInfo }) {
               <td>{location}</td>
               <td>{period}</td>
               <td className="table-actions">
-                <EditBulletSectionButton />
-                <CancelButtonSectionButtons />
+                <SectionButton iconUrl={editIconUrl} label={"edit"} className={"action-icon"} />
+                <SectionButton iconUrl={removeIconUrl} label={"remove"} className={"action-icon"} />
               </td>
             </tr>
           );

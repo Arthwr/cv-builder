@@ -20,4 +20,6 @@ function App() {
 // 7. clean up import statements and utilize "@import statements"
 // 8. implement correct key assignment to mapped out elements in Experience form preview form
 // 9. unify cancel bullet section button and edit bullet section button in a separate component.
+// 10. explicitly state file extensions as it might hit perfomance of app. e.g file -> file.jsx
+// 11. center section buttons that toggle form next to their sections correctly.
 export default App;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ResumeContainer from "@components/SharedComponents/ResumeContainer";
-import ToggleFormButton from "@components/SharedComponents/ToggleFormButton";
+import SectionButton from "@components/SharedComponents/SectionButton";
+import toggleFormIcon from "@assets/icons/toggleFormIcon.svg";
 import CourseworkData from "./CourseworkData";
 import data from "@data/mockData";
 
@@ -9,7 +10,7 @@ export default function ResumeCoursework({ isEditMode }) {
 
   return (
     <ResumeContainer isEditMode={isEditMode}>
-      <ToggleFormButton />
+      <SectionButton iconUrl={toggleFormIcon} className={"toggle-icon"} label={"toggle form"} />
       <CourseworkData coureworkData={formData} />
     </ResumeContainer>
   );
