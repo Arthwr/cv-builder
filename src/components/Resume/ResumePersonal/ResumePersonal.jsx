@@ -1,11 +1,11 @@
 import { useState } from "react";
-import useToggleForm from "@hooks/useToggleForm";
-import PersonalForm from "@components/Forms/PersonalForm/PersonalForm";
-import ResumeContainer from "@components/SharedComponents/ResumeContainer";
-import SectionButton from "@components/SharedComponents/SectionButton";
+import useToggleForm from "@hooks/useToggleForm.js";
+import PersonalForm from "@components/Forms/PersonalForm/PersonalForm.jsx";
+import ResumeContainer from "@components/SharedComponents/ResumeContainer.jsx";
+import SectionButton from "@components/SharedComponents/SectionButton.jsx";
+import PersonalData from "@components/Resume/ResumePersonal/PersonalData.jsx";
 import toggleFormIcon from "@assets/icons/toggleFormIcon.svg"
-import PersonalData from "./PersonalData";
-import data from "@data/mockData";
+import data from "@data/mockData.js";
 
 export default function ResumePersonal({ isEditMode }) {
   const [formInfo, setFormInfo] = useState(data.personal);

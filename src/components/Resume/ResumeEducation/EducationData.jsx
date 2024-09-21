@@ -1,4 +1,4 @@
-import EducationCard from "./EducationCard/EducationCard";
+import EducationCard from "@components/Resume/ResumeEducation/EducationCard/EducationCard.jsx";
 
 export default function EducationData({ educationData }) {
   return (

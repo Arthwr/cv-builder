@@ -1,11 +1,11 @@
 import { useState } from "react";
-import useToggleForm from "@hooks/useToggleForm";
-import ResumeContainer from "@components/SharedComponents/ResumeContainer";
-import ExperienceForm from "@components/Forms/ExperienceForm/ExperienceForm";
-import SectionButton from "@components/SharedComponents/SectionButton";
+import useToggleForm from "@hooks/useToggleForm.js";
+import ResumeContainer from "@components/SharedComponents/ResumeContainer.jsx";
+import ExperienceForm from "@components/Forms/ExperienceForm/ExperienceForm.jsx";
+import SectionButton from "@components/SharedComponents/SectionButton.jsx";
+import ExperienceData from "@components/Resume/ResumeExperience/ExperienceData.jsx";
 import toggleFormIcon from "@assets/icons/toggleFormIcon.svg"
-import ExperienceData from "./ExperienceData";
-import data from "@data/mockData";
+import data from "@data/mockData.js";
 
 export default function ResumeExperience({ isEditMode }) {
   const [formInfo, setFormInfo] = useState(data.experience);

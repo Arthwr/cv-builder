@@ -1,7 +1,7 @@
 import { useState } from "react";
-import PersonalFormActions from "./PersonalFormActions";
-import PersonalFormInput from "./PersonalFormInput";
-import FormContainer from "@components/SharedComponents/FormContainer";
+import PersonalFormActions from "./PersonalFormActions.jsx";
+import PersonalFormInput from "./PersonalFormInput.jsx";
+import FormContainer from "@components/SharedComponents/FormContainer.jsx";
 
 export default function PersonalForm({ onCancel, onSubmit, formInfo }) {
   const [form, setForm] = useState(formInfo);

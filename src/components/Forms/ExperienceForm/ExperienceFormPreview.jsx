@@ -1,4 +1,4 @@
-import SectionButton from "@components/SharedComponents/SectionButton";
+import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import editIconUrl from "@assets/icons/editSectionIcon.svg";
 import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
 

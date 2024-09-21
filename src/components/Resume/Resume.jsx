@@ -1,11 +1,11 @@
 import { useState } from "react";
-import AccentColor from "./AccentColor/AccentColor";
-import ResumeActions from "./ResumeActions/ResumeActions";
-import ResumePersonal from "./ResumePersonal/ResumePersonal";
-import ResumeExperience from "./ResumeExperience/ResumeExperience";
-import ResumeEducation from "./ResumeEducation/ResumeEducation";
-import ResumeCoursework from "./ResumeCoursework/ResumeCoursework";
-import ResumeSkills from "./ResumeSkills/ResumeSkills";
+import AccentColor from "@components/Resume/AccentColor/AccentColor.jsx";
+import ResumeActions from "@components/Resume/ResumeActions/ResumeActions.jsx";
+import ResumePersonal from "@components/Resume/ResumePersonal/ResumePersonal.jsx";
+import ResumeExperience from "@components/Resume/ResumeExperience/ResumeExperience.jsx";
+import ResumeEducation from "@components/Resume/ResumeEducation/ResumeEducation.jsx";
+import ResumeCoursework from "@components/Resume/ResumeCoursework/ResumeCoursework.jsx";
+import ResumeSkills from "@components/Resume/ResumeSkills/ResumeSkills.jsx";
 
 export default function Resume() {
   const [isEditMode, setEditMode] = useState(false);

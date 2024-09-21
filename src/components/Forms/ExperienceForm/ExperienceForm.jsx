@@ -1,6 +1,6 @@
-import FormContainer from "@components/SharedComponents/FormContainer";
-import ExperienceFormActions from "./ExperienceFormActions";
-import ExperienceFormPreview from "./ExperienceFormPreview";
+import FormContainer from "@components/SharedComponents/FormContainer.jsx";
+import ExperienceFormActions from "@components/Forms/ExperienceForm/ExperienceFormActions.jsx";
+import ExperienceFormPreview from "@components/Forms/ExperienceForm/ExperienceFormPreview.jsx";
 
 export default function ExperienceForm({ formInfo, onCancel }) {
   return (

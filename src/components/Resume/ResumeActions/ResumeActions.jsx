@@ -1,5 +1,5 @@
-import EditModeSwitch from "./EditModeSwitch/EditModeSwitch";
-import GeneratePDF from "./GeneratePDF/GeneratePDF";
+import EditModeSwitch from "@components/Resume/ResumeActions/EditModeSwitch/EditModeSwitch.jsx";
+import GeneratePDF from "@components/Resume/ResumeActions/GeneratePDF/GeneratePDF.jsx";
 
 export default function ResumeActions({ toggleEditing }) {
   return (

@@ -1,4 +1,4 @@
-import ExperienceCard from "./ExperienceCard/ExperienceCard";
+import ExperienceCard from "@components/Resume/ResumeExperience/ExperienceCard/ExperienceCard.jsx";
 
 export default function ExperienceData({ experienceData }) {
   return (
