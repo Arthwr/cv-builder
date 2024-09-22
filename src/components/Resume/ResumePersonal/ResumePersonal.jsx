@@ -8,25 +8,25 @@ import toggleFormIcon from "@assets/icons/toggleFormIcon.svg"
 import data from "@data/mockData.js";
 
 export default function ResumePersonal({ isEditMode }) {
-  const [formInfo, setFormInfo] = useState(data.personal);
+  const [personalData, setPersonalData] = useState(data.personal);
   const [isFormOpen, toggleForm] = useToggleForm();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const formObject = Object.fromEntries(formData.entries());
-    setFormInfo(formObject);
+    setPersonalData(formObject);
     toggleForm();
   };
 
   return (
     <>
       {isFormOpen ? (
-        <PersonalForm onCancel={toggleForm} onSubmit={handleSubmit} formInfo={formInfo} />
+        <PersonalForm onCancel={toggleForm} onSubmit={handleSubmit} formInfo={personalData} />
       ) : (
         <ResumeContainer isEditMode={isEditMode}>
           <SectionButton iconUrl={toggleFormIcon} className={"toggle-icon"} label={"toggle form"} onClick={toggleForm} />
-          <PersonalData userData={formInfo} />
+          <PersonalData userData={personalData} />
         </ResumeContainer>
       )}
     </>

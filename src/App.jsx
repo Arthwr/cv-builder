@@ -17,8 +17,6 @@ function App() {
 // 3. change accent color
 // 4. add forms and useState react for content change
 // 5. remove unecessary folder nesting
-// 7. clean up import statements and utilize "@import statements"
 // 8. implement correct key assignment to mapped out elements in Experience form preview form
-// 10. explicitly state file extensions as it might hit perfomance of app. e.g file -> file.jsx
 // 11. center section buttons that toggle form next to their sections correctly.
 export default App;

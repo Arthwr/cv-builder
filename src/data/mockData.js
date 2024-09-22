@@ -10,7 +10,7 @@ const data = {
 
   experience: [
     {
-      id: 1,
+      id: "1experQw",
       summary: {
         position: "Full Stack Software Engineer",
         company: "Company A",
@@ -24,7 +24,7 @@ const data = {
       ],
     },
     {
-      id: 2,
+      id: "2experQw",
       summary: {
         position: "Teaching Assistant",
         company: "Company B",
@@ -37,7 +37,7 @@ const data = {
       ],
     },
     {
-      id: 3,
+      id: "3experQw",
       summary: {
         position: "Software Engineer Intern",
         company: "Company C",
@@ -51,7 +51,7 @@ const data = {
       ],
     },
     {
-      id: 4,
+      id: "4experQw",
       summary: {
         position: "Software Engineer",
         company: "Company D",
@@ -66,14 +66,14 @@ const data = {
   ],
   education: [
     {
-      id: 1,
+      id: "1educaWe",
       degree: "M.S in Electrical and Computer Engineering",
       institution: "New York University",
       location: "New York, NY",
       year: "2017",
     },
     {
-      id: 2,
+      id: "2educaWe",
       degree: "B.S. in Electrical and Computer Engineering",
       institution: "New York University",
       location: "New York, NY",
@@ -81,14 +81,14 @@ const data = {
     },
   ],
   coursework: [
-    { id: 1, title: "Distributed Systems" },
-    { id: 2, title: "Deep Learning" },
-    { id: 3, title: "Pattern Recognition Theory" },
-    { id: 4, title: "Data Structures" },
-    { id: 5, title: "Machine Learning" },
-    { id: 6, title: "Data Science" },
-    { id: 7, title: "Web Application Development" },
-    { id: 8, title: "Principles of Software Systems Construction" },
+    { id: "1coursRt", title: "Distributed Systems" },
+    { id: "2coursRt", title: "Deep Learning" },
+    { id: "3coursRt", title: "Pattern Recognition Theory" },
+    { id: "4coursRt", title: "Data Structures" },
+    { id: "5coursRt", title: "Machine Learning" },
+    { id: "6coursRt", title: "Data Science" },
+    { id: "7coursRt", title: "Web Application Development" },
+    { id: "8coursRt", title: "Principles of Software Systems Construction" },
   ],
   skills: `Programming Languages: Python, Java, C, C++, Go, JavaScript, TypeScript Software\nTools/Frameworks: Git, AWS, Jira, Django, HTML/CSS, MATLAB, React, Node.js, MongoDB
 `,

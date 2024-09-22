@@ -2,7 +2,11 @@ import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import editIconUrl from "@assets/icons/editSectionIcon.svg";
 import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
 
-export default function ExperienceFormPreview({ formInfo }) {
+export default function ExperienceFormPreview({ formInfo, onRemove }) {
+  const createRemoveHandler = (id) => {
+    return () => onRemove(id);
+  };
+
   return (
     <table>
       <thead>
@@ -25,7 +29,12 @@ export default function ExperienceFormPreview({ formInfo }) {
               <td>{period}</td>
               <td className="table-actions">
                 <SectionButton iconUrl={editIconUrl} label={"edit"} className={"action-icon"} />
-                <SectionButton iconUrl={removeIconUrl} label={"remove"} className={"action-icon"} />
+                <SectionButton
+                  iconUrl={removeIconUrl}
+                  label={"remove"}
+                  className={"action-icon"}
+                  onClick={createRemoveHandler(item.id)}
+                />
               </td>
             </tr>
           );

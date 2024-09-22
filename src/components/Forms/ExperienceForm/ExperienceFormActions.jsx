@@ -1,8 +1,8 @@
-export default function ExperienceFormActions({ onCancel }) {
+export default function ExperienceFormActions({ onCancel, onSave }) {
   return (
     <div className="form-actions">
-      <button onClick={onCancel}>Cancel</button>
-      <button>Save</button>
+      <button type="button" onClick={onCancel}>Cancel</button>
+      <button type="button" onClick={onSave}>Save</button>
     </div>
   );
 }
