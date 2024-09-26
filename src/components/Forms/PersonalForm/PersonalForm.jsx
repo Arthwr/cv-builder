@@ -1,36 +1,19 @@
-import { useState } from "react";
-import PersonalFormActions from "./PersonalFormActions.jsx";
+import FormActions from "../../SharedComponents/FormActions.jsx";
 import PersonalFormInput from "./PersonalFormInput.jsx";
 import FormContainer from "@components/SharedComponents/FormContainer.jsx";
+import useFormData from "@hooks/useFormData.js";
 
 export default function PersonalForm({ onCancel, onSubmit, formInfo }) {
-  const [form, setForm] = useState(formInfo);
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setForm((prevForm) => ({
-      ...prevForm,
-      [id]: value,
-    }));
-  };
-
-  const handleClear = () => {
-    setForm({
-      firstName: "",
-      lastName: "",
-      location: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-    });
-  };
+  const { formData, handleFormChange, handleFormClear } = useFormData(formInfo);
 
   return (
-    <FormContainer>
-      <form id="personal-form" onSubmit={onSubmit}>
-        <PersonalFormInput onChange={handleChange} formState={form} />
-        <PersonalFormActions onCancel={onCancel} onClear={handleClear} />
-      </form>
-    </FormContainer>
+    <div className="separator">
+      <FormContainer>
+        <form id="personal-form" className="form-group" onSubmit={onSubmit}>
+          <PersonalFormInput onChange={handleFormChange} formState={formData} />
+          <FormActions onCancel={onCancel} onClear={handleFormClear} />
+        </form>
+      </FormContainer>
+    </div>
   );
 }

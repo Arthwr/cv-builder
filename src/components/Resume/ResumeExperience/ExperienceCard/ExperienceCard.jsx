@@ -10,8 +10,8 @@ export default function ExperienceCard({ data }) {
         <li>{period}</li>
       </ul>
       <ul className="bullets">
-        {data.bullets.map((point, index) => (
-          <li key={index}>{point}</li>
+        {data.bullets.map((item) => (
+          <li key={item.id}>{item.info}</li>
         ))}
       </ul>
     </>

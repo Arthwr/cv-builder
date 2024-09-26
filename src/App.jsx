@@ -19,4 +19,6 @@ function App() {
 // 5. remove unecessary folder nesting
 // 8. implement correct key assignment to mapped out elements in Experience form preview form
 // 11. center section buttons that toggle form next to their sections correctly.
+// 12. Make Download PDF button disabled during edit mode
+// 13. Edit mode toggles back resume final state
 export default App;

@@ -7,6 +7,7 @@
   --accent-blue: #3c78d8;
   --line-break: #d9d9d9;
   --bg-form: #dcdcdc;
+  --bg-bullet-form: #fef3eb;
   --button: #7392b7;
   --button-highlight: #3498db;
   color: var(--text-main);
@@ -234,6 +235,7 @@ main {
 .will-change {
   will-change: opacity, transform;
 }
+
 /* Personal Form Actions */
 .actions {
   display: flex;
@@ -269,12 +271,15 @@ main {
 }
 
 /* Resume Form */
-.form-container {
-  background-color: var(--outer-cv);
+.separator {
   margin: 1rem 0;
 }
 
-.form-wrapper > form {
+.form-container {
+  background-color: var(--outer-cv);
+}
+
+.form-wrapper > .form-group {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -288,21 +293,24 @@ main {
   width: 100%;
 }
 
-.personal-input > label {
+.personal-input > label,
+.experience-summary-form > label {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 0.5rem;
+  text-align: left;
 }
 
-.personal-input input {
+.personal-input input,
+.experience-summary-form input {
   padding: 0.25rem;
 }
 
 .form-actions {
   display: flex;
+  justify-content: flex-end;
   gap: 0.5rem;
-  align-self: flex-end;
 }
 
 /* Experience Table Section */
@@ -367,6 +375,60 @@ td {
     contrast(85%);
 }
 
+.bullets-preview {
+  padding: 1rem 0.5rem;
+}
+
+.bullets-preview .bullets-container {
+  display: flex;
+  justify-content: center;
+}
+
+.bullets-preview ul {
+  display: block;
+  max-width: 100ch;
+  list-style-type: disc;
+}
+
+.bullets-preview + td {
+  background-color: inherit;
+  border: none;
+}
+
+/* Experience bullet form */
+fieldset {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.experience-summary-form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.experience-bullet-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience-bullet-form label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.experience-bullet-form textarea {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.bullet-form-bg {
+  background-color: var(--bg-bullet-form);
+}
+
 /* Switch slider */
 .edit-mode-container {
   display: flex;
@@ -428,7 +490,7 @@ td {
 }
 
 @media screen and (max-width: 1025px) {
-  .form-wrapper > form {
+  .form-wrapper > .form-group {
     padding: 1rem;
   }
 }
