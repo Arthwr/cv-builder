@@ -23,25 +23,32 @@ const updateFormData = (dataObject, fieldName, value) => {
   return updatedDataObject;
 };
 
+const clearFormData = (data) => {
+  if (Array.isArray(data)) {
+    return data.map(clearFormData);
+  }
+
+  if (typeof data === "object" && data !== null) {
+    return Object.keys(data).reduce((acc, key) => {
+      acc[key] = key === "id" ? data[key] : clearFormData(data[key]);
+      return acc;
+    }, {});
+  }
+
+  return typeof data === "string" ? "" : data;
+};
+
 export default function useFormData(initialFormState) {
   const [formData, setFormData] = useState(initialFormState);
 
   const handleFormChange = (e) => {
     const { id, name, value } = e.target;
     const fieldName = id || name;
-
-    setFormData((prevForm) => {
-      return updateFormData(prevForm, fieldName, value);
-    });
+    setFormData((prevForm) => updateFormData(prevForm, fieldName, value));
   };
 
   const handleFormClear = () => {
-    const clearedForm = Object.keys(formData).reduce((acc, key) => {
-      acc[key] = "";
-      return acc;
-    }, {});
-
-    setFormData(clearedForm);
+    setFormData((prevForm) => clearFormData(prevForm));
   };
 
   return { formData, handleFormChange, handleFormClear };

@@ -120,8 +120,7 @@ const data = {
     { id: "7coursRt", title: "Web Application Development" },
     { id: "8coursRt", title: "Principles of Software Systems Construction" },
   ],
-  skills: `Programming Languages: Python, Java, C, C++, Go, JavaScript, TypeScript Software\nTools/Frameworks: Git, AWS, Jira, Django, HTML/CSS, MATLAB, React, Node.js, MongoDB
-`,
+  skills: `Programming Languages: Python, Java, C, C++, Go, JavaScript, TypeScript Software\nTools/Frameworks: Git, AWS, Jira, Django, HTML/CSS, MATLAB, React, Node.js, MongoDB`,
 };
 
 export default data;
