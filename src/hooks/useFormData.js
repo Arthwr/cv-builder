@@ -40,6 +40,7 @@ const clearFormData = (data) => {
 
 export default function useFormData(initialFormState) {
   const [formData, setFormData] = useState(initialFormState);
+  const [initialState] = useState(initialFormState);
 
   const handleFormChange = (e) => {
     const { id, name, value } = e.target;
@@ -51,5 +52,9 @@ export default function useFormData(initialFormState) {
     setFormData((prevForm) => clearFormData(prevForm));
   };
 
-  return { formData, handleFormChange, handleFormClear };
+  const handleFormReset = () => {
+    setFormData(initialState);
+  };
+
+  return { formData, handleFormChange, handleFormClear, handleFormReset };
 }

@@ -1,6 +1,6 @@
 export default function ExperienceEditForm({ formData, onChange }) {
   return (
-    <form id="bullet-form">
+    <>
       <fieldset className="experience-summary-form">
         <legend>Summary:</legend>
         <label htmlFor="summary.position">
@@ -48,19 +48,17 @@ export default function ExperienceEditForm({ formData, onChange }) {
           />
         </label>
       </fieldset>
-      <div>
-        <fieldset className="experience-bullet-form">
-          <legend>Key position moments:</legend>
-          <div>
-            {formData.bullets.map((item, index) => (
-              <label key={item.id}>
-                <span>{index + 1}</span>
-                <textarea type="text" id={`bullets.${index}.info`}  value={item.info} onChange={onChange} />
-              </label>
-            ))}
-          </div>
-        </fieldset>
-      </div>
-    </form>
+      <fieldset className="experience-bullet-form">
+        <legend>Key position moments:</legend>
+        <div>
+          {formData.bullets.map((item, index) => (
+            <label key={item.id}>
+              <span>{index + 1}</span>
+              <textarea type="text" id={`bullets.${index}.info`} value={item.info} onChange={onChange} />
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    </>
   );
 }

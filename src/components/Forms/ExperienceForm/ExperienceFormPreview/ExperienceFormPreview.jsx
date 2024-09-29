@@ -4,7 +4,7 @@ import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import editIconUrl from "@assets/icons/editSectionIcon.svg";
 import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
 
-export default function ExperienceFormPreview({ formInfo, onRemove }) {
+export default function ExperienceFormPreview({ formInfo, onRemove, onSubmit }) {
   const [expandedRow, setExpandedRow] = useState(null);
 
   const toggleEdit = (id) => {
@@ -48,7 +48,7 @@ export default function ExperienceFormPreview({ formInfo, onRemove }) {
                   />
                 </td>
               </tr>
-              <tr>{isExpanded && <DetailedExperienceView data={item} />}</tr>
+              <tr>{isExpanded && <DetailedExperienceView data={item} onSubmit={onSubmit} />}</tr>
             </Fragment>
           );
         })}

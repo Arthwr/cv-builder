@@ -5,18 +5,29 @@ import ExperienceEditForm from "@components/Forms/ExperienceForm/ExperienceFormP
 import FormActions from "@components/SharedComponents/FormActions.jsx";
 import bulletToggleFormIcon from "@assets/icons/bulletToggleFormIcon.svg";
 
-export default function DetailedExperienceView({ data }) {
-  const [isFormOpen, toggleFormOpen] = useToggleForm();
-  const { formData, handleFormChange, handleFormClear } = useFormData(data);
+export default function DetailedExperienceView({ data, onSubmit }) {
+  const { formData, handleFormChange, handleFormClear, handleFormReset } = useFormData(data);
+  const [isFormOpen, toggleForm] = useToggleForm();
+
+  const handleCancel = () => {
+    handleFormReset();
+    toggleForm();
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
+    toggleForm();
+  };
 
   return (
     <>
       <td className={`bullets-preview ${isFormOpen ? `bullet-form-bg` : ``}`} colSpan={4}>
         {isFormOpen ? (
-          <>
+          <form id="bullet-form" onSubmit={handleSubmit}>
             <ExperienceEditForm formData={formData} onChange={handleFormChange} />
-            <FormActions onClear={handleFormClear} />
-          </>
+            <FormActions onClear={handleFormClear} onCancel={handleCancel} />
+          </form>
         ) : (
           <div className="bullets-container">
             <ul>
@@ -33,7 +44,7 @@ export default function DetailedExperienceView({ data }) {
             className={"action-icon"}
             iconUrl={bulletToggleFormIcon}
             label={"toggle bullet form"}
-            onClick={toggleFormOpen}
+            onClick={toggleForm}
           />
         )}
       </td>

@@ -21,4 +21,5 @@ function App() {
 // 11. center section buttons that toggle form next to their sections correctly.
 // 12. Make Download PDF button disabled during edit mode
 // 13. Edit mode toggles back resume final state
+// 14. Improve experience bullet form preview (looks bad for short messages);
 export default App;

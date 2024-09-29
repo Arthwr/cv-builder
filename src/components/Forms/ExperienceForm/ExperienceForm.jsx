@@ -16,6 +16,12 @@ export default function ExperienceForm({ formInfo, toggleFormHandler, setData })
     setCurrentFormInfo((prevExperience) => prevExperience.filter((experience) => experience.id !== id));
   };
 
+  const confirmExperienceChange = (updatedExperience) => {
+    setCurrentFormInfo((prevExperience) =>
+      prevExperience.map((item) => (item.id === updatedExperience.id ? updatedExperience : item))
+    );
+  };
+
   const confirmFormChanges = () => {
     setData(currentFormInfo);
     toggleFormHandler();
@@ -25,7 +31,11 @@ export default function ExperienceForm({ formInfo, toggleFormHandler, setData })
     <div className="separator">
       <FormContainer>
         <div className="form-group">
-          <ExperienceFormPreview formInfo={currentFormInfo} onRemove={removeExperienceItem} />
+          <ExperienceFormPreview
+            formInfo={currentFormInfo}
+            onRemove={removeExperienceItem}
+            onSubmit={confirmExperienceChange}
+          />
           <ExperienceFormActions onCancel={revertFormChanges} onSave={confirmFormChanges} />
         </div>
       </FormContainer>

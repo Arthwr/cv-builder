@@ -3,9 +3,9 @@ import { useState } from "react";
 export default function useToggleForm(initialState = false) {
   const [isFormOpen, setFormOpen] = useState(initialState);
 
-  const toggleFormOpen = () => {
+  const toggleForm = () => {
     setFormOpen((prev) => !prev);
   };
 
-  return [isFormOpen, toggleFormOpen];
+  return [isFormOpen, toggleForm];
 }
