@@ -412,7 +412,7 @@ fieldset {
   gap: 2rem;
 }
 
-.experience-bullet-form div {
+.experience-bullet-form > div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -420,17 +420,24 @@ fieldset {
 
 .experience-bullet-form label {
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 1rem;
 }
 
 .experience-bullet-form textarea {
+  height: auto;
   width: 100%;
   padding: 0.25rem;
 }
 
 .bullet-form-bg {
   background-color: var(--bg-bullet-form);
+}
+
+.input-bullet-group > div {
+  display: flex;
+  gap: 1rem;
 }
 
 /* Switch slider */
@@ -496,6 +503,10 @@ fieldset {
 @media screen and (max-width: 1025px) {
   .form-wrapper > .form-group {
     padding: 1rem;
+  }
+
+  .experience-bullet-form textarea {
+    min-height: 90px;
   }
 }
 

@@ -6,8 +6,18 @@ import FormActions from "@components/SharedComponents/FormActions.jsx";
 import bulletToggleFormIcon from "@assets/icons/bulletToggleFormIcon.svg";
 
 export default function DetailedExperienceView({ data, onSubmit }) {
-  const { formData, handleFormChange, handleFormClear, handleFormReset } = useFormData(data);
+  const { formData, setFormData, handleFormChange, handleFormClear, handleFormReset } = useFormData(data);
   const [isFormOpen, toggleForm] = useToggleForm();
+
+  const handleBulletRemove = (id) => {
+    setFormData((prevFormData) => {
+      const updatedBullets = prevFormData.bullets.filter((bullet) => bullet.id !== id);
+      return {
+        ...prevFormData,
+        bullets: updatedBullets,
+      };
+    });
+  };
 
   const handleCancel = () => {
     handleFormReset();
@@ -25,7 +35,7 @@ export default function DetailedExperienceView({ data, onSubmit }) {
       <td className={`bullets-preview ${isFormOpen ? `bullet-form-bg` : ``}`} colSpan={4}>
         {isFormOpen ? (
           <form id="bullet-form" onSubmit={handleSubmit}>
-            <ExperienceEditForm formData={formData} onChange={handleFormChange} />
+            <ExperienceEditForm formData={formData} onChange={handleFormChange} onRemove={handleBulletRemove} />
             <FormActions onClear={handleFormClear} onCancel={handleCancel} />
           </form>
         ) : (

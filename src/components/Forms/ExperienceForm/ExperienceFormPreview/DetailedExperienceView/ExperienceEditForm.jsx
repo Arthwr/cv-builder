@@ -1,4 +1,7 @@
-export default function ExperienceEditForm({ formData, onChange }) {
+import SectionButton from "@components/SharedComponents/SectionButton";
+import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
+
+export default function ExperienceEditForm({ formData, onChange, onRemove }) {
   return (
     <>
       <fieldset className="experience-summary-form">
@@ -49,13 +52,21 @@ export default function ExperienceEditForm({ formData, onChange }) {
         </label>
       </fieldset>
       <fieldset className="experience-bullet-form">
-        <legend>Key position moments:</legend>
-        <div>
+        <legend>Key points:</legend>
+        <div className="input-bullet-group">
           {formData.bullets.map((item, index) => (
-            <label key={item.id}>
-              <span>{index + 1}</span>
-              <textarea type="text" id={`bullets.${index}.info`} value={item.info} onChange={onChange} />
-            </label>
+            <div key={item.id}>
+              <label>
+                <span>{index + 1}</span>
+                <textarea type="text" id={`bullets.${index}.info`} value={item.info} onChange={onChange} />
+              </label>
+              <SectionButton
+                iconUrl={removeIconUrl}
+                label={"remove"}
+                className={"action-icon"}
+                onClick={() => onRemove(item.id)}
+              />
+            </div>
           ))}
         </div>
       </fieldset>

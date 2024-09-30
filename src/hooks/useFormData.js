@@ -56,5 +56,5 @@ export default function useFormData(initialFormState) {
     setFormData(initialState);
   };
 
-  return { formData, handleFormChange, handleFormClear, handleFormReset };
+  return { formData, setFormData, handleFormChange, handleFormClear, handleFormReset };
 }

@@ -22,4 +22,6 @@ function App() {
 // 12. Make Download PDF button disabled during edit mode
 // 13. Edit mode toggles back resume final state
 // 14. Improve experience bullet form preview (looks bad for short messages);
+// 15. Higlight currently active experience view
+// 16. Implement restriction on having less then 1 bullet point for position in form
 export default App;
