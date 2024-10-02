@@ -49,7 +49,7 @@ export default function DetailedExperienceView({ data, onSubmit }) {
           <form id="bullet-form" onSubmit={handleSubmit}>
             <ExperienceEditForm formData={formData} onChange={handleFormChange} onRemove={handleBulletRemove} />
             <div className="form-actions">
-              <button type="button" className="add-bullet-btn" onClick={handleBulletAddition}>
+              <button type="button" className="add-btn" onClick={handleBulletAddition}>
                 Add More
               </button>
               <button type="button" onClick={handleFormClear}>

@@ -18,7 +18,6 @@ function App() {
 // 4. add forms and useState react for content change
 // 5. remove unecessary folder nesting
 // 8. implement correct key assignment to mapped out elements in Experience form preview form
-// 11. center section buttons that toggle form next to their sections correctly.
 // 12. Make Download PDF button disabled during edit mode
 // 13. Edit mode toggles back resume final state
 // 14. Improve experience bullet form preview (looks bad for short messages);
