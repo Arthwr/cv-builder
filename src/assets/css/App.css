@@ -376,7 +376,7 @@ td {
 }
 
 .bullets-preview {
-  padding: 1rem 0.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .bullets-preview .bullets-container {
@@ -438,6 +438,10 @@ fieldset {
 .input-bullet-group > div {
   display: flex;
   gap: 1rem;
+}
+
+.add-bullet-btn {
+  margin-right: auto;
 }
 
 /* Switch slider */

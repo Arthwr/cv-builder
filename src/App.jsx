@@ -24,4 +24,5 @@ function App() {
 // 14. Improve experience bullet form preview (looks bad for short messages);
 // 15. Higlight currently active experience view
 // 16. Implement restriction on having less then 1 bullet point for position in form
+// 17. Bring form button shouldn't clickable while invisible
 export default App;
