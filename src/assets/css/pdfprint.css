@@ -63,16 +63,14 @@
   }
 
   .experience {
-    margin-top: 1.15em;
+    margin-top: 0.25em;
   }
 
   .coursework li {
     font-weight: 500;
   }
 
-  .education,
-  .coursework,
-  .skills {
+  .resume-container:not(:first-child) {
     margin-top: 0.85em;
   }
 

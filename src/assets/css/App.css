@@ -129,10 +129,7 @@ main {
   content: "|";
 }
 
-.education,
-.experience,
-.coursework,
-.skills {
+.resume-container:not(:first-child) {
   margin-top: 1.5rem;
 }
 
