@@ -57,7 +57,7 @@ export default function ExperienceEditForm({ formData, onChange, onRemove }) {
           {formData.bullets.map((item, index) => (
             <div key={item.id}>
               <label>
-                <span>{index + 1}</span>
+                <span>{index + 1}.</span>
                 <textarea type="text" id={`bullets.${index}.info`} value={item.info} onChange={onChange} />
               </label>
               <SectionButton

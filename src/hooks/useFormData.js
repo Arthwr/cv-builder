@@ -1,10 +1,9 @@
 import { useState } from "react";
 
-const updateFormData = (dataObject, fieldName, value) => {
+const updateFormData = (dataSource, fieldName, value) => {
   const keys = fieldName.split(".");
-  const updatedDataObject = { ...dataObject };
-
-  let currentLevel = updatedDataObject;
+  let updatedData = Array.isArray(dataSource) ? [...dataSource] : { ...dataSource };
+  let currentLevel = updatedData;
 
   for (let i = 0; i < keys.length - 1; i++) {
     const key = keys[i];
@@ -19,8 +18,7 @@ const updateFormData = (dataObject, fieldName, value) => {
   }
 
   currentLevel[keys[keys.length - 1]] = value;
-
-  return updatedDataObject;
+  return updatedData;
 };
 
 const clearFormData = (data) => {

@@ -1,6 +1,6 @@
 export default function PersonalFormInput({ formState, onChange }) {
   return (
-    <div className="personal-input">
+    <div className="form-input">
       <label htmlFor="firstName">
         <span>First Name:</span>
         <input type="text" id="firstName" name="firstName" value={formState.firstName} onChange={onChange} required />

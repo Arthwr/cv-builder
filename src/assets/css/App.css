@@ -283,14 +283,29 @@ main {
   padding: 1.5rem;
 }
 
-.personal-input {
+.form-input {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   width: 100%;
 }
 
-.personal-input > label,
+.form-input.education-input {
+  grid-template-rows: repeat(2, 1fr)
+}
+
+.form-input.education-input > label:first-child {
+  grid-column: span 3;
+}
+
+.education-form-group {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input > label,
 .experience-summary-form > label {
   display: flex;
   flex: 1;
@@ -299,7 +314,7 @@ main {
   text-align: left;
 }
 
-.personal-input input,
+.form-input input,
 .experience-summary-form input {
   padding: 0.25rem;
 }
