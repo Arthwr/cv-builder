@@ -290,22 +290,26 @@ main {
   width: 100%;
 }
 
-.form-input.education-input {
-  grid-template-rows: repeat(2, 1fr)
+.education-input {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.form-input.education-input > label:first-child {
+.education-input > label:first-child {
   grid-column: span 3;
 }
 
 .education-form-group {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
 
 .form-input > label,
+.education-input > label,
 .experience-summary-form > label {
   display: flex;
   flex: 1;
@@ -315,6 +319,7 @@ main {
 }
 
 .form-input input,
+.education-input input,
 .experience-summary-form input {
   padding: 0.25rem;
 }
@@ -368,6 +373,7 @@ td {
 }
 
 .action-icon {
+  flex-shrink: 0;
   cursor: pointer;
   border: none;
   margin: 0;

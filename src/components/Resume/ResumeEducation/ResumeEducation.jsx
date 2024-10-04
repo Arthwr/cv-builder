@@ -14,7 +14,7 @@ export default function ResumeEducation({ isEditMode }) {
   return (
     <>
       {isFormOpen ? (
-        <EducationForm data={formData} toggleForm={toggleForm} />
+        <EducationForm data={formData} toggleForm={toggleForm} setData={setFormData} />
       ) : (
         <ResumeContainer isEditMode={isEditMode}>
           <SectionButton

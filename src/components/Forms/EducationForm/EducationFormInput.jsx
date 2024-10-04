@@ -1,6 +1,6 @@
 export default function EducationFormInput({ data, index, onChange }) {
   return (
-    <div className="form-input education-input">
+    <div className="education-input">
       <label htmlFor="degree">
         <span>Degree:</span>
         <input type="text" id={`${index}.degree`} name="degree" value={data.degree} onChange={onChange} required />
