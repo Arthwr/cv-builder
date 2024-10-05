@@ -1,8 +1,15 @@
-export default function FormActions({ onCancel, onClear }) {
+export default function FormActions({ onAddition, onClear, onCancel }) {
   return (
     <div className="form-actions">
-      <button type="button" onClick={onClear}>Clear</button>
-      <button type="button" onClick={onCancel}>Cancel</button>
+      <button type="button" className="add-btn" onClick={onAddition}>
+        Add More
+      </button>
+      <button type="button" onClick={onClear}>
+        Clear
+      </button>
+      <button type="button" onClick={onCancel}>
+        Cancel
+      </button>
       <button type="submit">Save</button>
     </div>
   );

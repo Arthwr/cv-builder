@@ -24,6 +24,5 @@ function App() {
 // 15. Higlight currently active experience view
 // 16. Implement restriction on having less then 1 bullet point for position in form
 // 17. Bring form button shouldn't clickable while invisible
-// 18. Unify into single component Add & Clear & Cancel & Save buttons section? 
-// 19. Integrate removal addition into useFormData hook?
+// 20. Local storage save ?
 export default App;

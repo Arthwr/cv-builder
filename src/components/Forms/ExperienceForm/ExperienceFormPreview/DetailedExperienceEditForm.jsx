@@ -1,7 +1,7 @@
-import SectionButton from "@components/SharedComponents/SectionButton";
+import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
 
-export default function ExperienceEditForm({ formData, onChange, onRemove }) {
+export default function DetailedExperienceEditForm({ formData, onChange, onRemove }) {
   return (
     <>
       <fieldset className="experience-summary-form">

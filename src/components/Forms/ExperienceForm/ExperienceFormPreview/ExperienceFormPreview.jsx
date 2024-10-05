@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import DetailedExperienceView from "@components/Forms/ExperienceForm/ExperienceFormPreview/DetailedExperienceView/DetailedExperienceView.jsx";
+import DetailedExperienceView from "@components/Forms/ExperienceForm/ExperienceFormPreview/DetailedExperienceView.jsx";
 import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import editIconUrl from "@assets/icons/editSectionIcon.svg";
 import removeIconUrl from "@assets/icons/removeSectionIcon.svg";

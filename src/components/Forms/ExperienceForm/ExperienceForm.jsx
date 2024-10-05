@@ -1,7 +1,7 @@
 import { useState } from "react";
 import generateRandomId from "@utils/generateRandomId.js";
 import FormContainer from "@components/SharedComponents/FormContainer.jsx";
-import ExperienceFormActions from "@components/Forms/ExperienceForm/ExperienceFormActions/ExperienceFormActions.jsx";
+import ExperienceFormActions from "@components/Forms/ExperienceForm/ExperienceFormActions.jsx";
 import ExperienceFormPreview from "@components/Forms/ExperienceForm/ExperienceFormPreview/ExperienceFormPreview.jsx";
 
 export default function ExperienceForm({ formInfo, toggleFormHandler, setData }) {

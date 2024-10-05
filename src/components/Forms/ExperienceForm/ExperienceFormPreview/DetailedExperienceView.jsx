@@ -1,9 +1,10 @@
 import useToggleForm from "@hooks/useToggleForm.js";
 import useFormData from "@hooks/useFormData.js";
 import generateRandomId from "@utils/generateRandomId.js";
-import SectionButton from "@components/SharedComponents/SectionButton.jsx";
-import ExperienceEditForm from "@components/Forms/ExperienceForm/ExperienceFormPreview/DetailedExperienceView/ExperienceEditForm.jsx";
 import bulletToggleFormIcon from "@assets/icons/bulletToggleFormIcon.svg";
+import SectionButton from "@components/SharedComponents/SectionButton.jsx";
+import DetailedExperienceEditForm from "@components/Forms/ExperienceForm/ExperienceFormPreview/DetailedExperienceEditForm.jsx";
+import FormActions from "@components/SharedComponents/FormActions.jsx";
 
 export default function DetailedExperienceView({ data, onSubmit }) {
   const { formData, setFormData, updateInitialState, handleFormChange, handleFormClear, handleFormReset } =
@@ -22,7 +23,10 @@ export default function DetailedExperienceView({ data, onSubmit }) {
 
   const handleBulletAddition = () => {
     setFormData((prevFormData) => {
-      const updatedBullets = [...prevFormData.bullets, { id: generateRandomId(), info: "" }];
+      const updatedBullets = [
+        ...prevFormData.bullets,
+        { id: generateRandomId(), info: "Donec a felis non nisi porta gravida in a est. Cras eget consectetur nisi." },
+      ];
       return {
         ...prevFormData,
         bullets: updatedBullets,
@@ -47,19 +51,8 @@ export default function DetailedExperienceView({ data, onSubmit }) {
       <td className={`bullets-preview ${isFormOpen ? `bullet-form-bg` : ``}`} colSpan={4}>
         {isFormOpen ? (
           <form id="bullet-form" onSubmit={handleSubmit}>
-            <ExperienceEditForm formData={formData} onChange={handleFormChange} onRemove={handleBulletRemove} />
-            <div className="form-actions">
-              <button type="button" className="add-btn" onClick={handleBulletAddition}>
-                Add More
-              </button>
-              <button type="button" onClick={handleFormClear}>
-                Clear
-              </button>
-              <button type="button" onClick={handleCancel}>
-                Cancel
-              </button>
-              <button type="submit">Save</button>
-            </div>
+            <DetailedExperienceEditForm formData={formData} onChange={handleFormChange} onRemove={handleBulletRemove} />
+            <FormActions onAddition={handleBulletAddition} onClear={handleFormClear} onCancel={handleCancel} />
           </form>
         ) : (
           <div className="bullets-container">
