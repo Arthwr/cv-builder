@@ -1,6 +1,10 @@
 import { useState } from "react";
 
 const updateFormData = (dataSource, fieldName, value) => {
+  if (typeof dataSource === "string") {
+    return value;
+  }
+
   const keys = fieldName.split(".");
   let updatedData = Array.isArray(dataSource) ? [...dataSource] : { ...dataSource };
   let currentLevel = updatedData;

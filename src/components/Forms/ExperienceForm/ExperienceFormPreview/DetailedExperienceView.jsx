@@ -1,10 +1,10 @@
+import bulletToggleFormIcon from "@assets/icons/bulletToggleFormIcon.svg";
 import useToggleForm from "@hooks/useToggleForm.js";
 import useFormData from "@hooks/useFormData.js";
 import generateRandomId from "@utils/generateRandomId.js";
-import bulletToggleFormIcon from "@assets/icons/bulletToggleFormIcon.svg";
 import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import DetailedExperienceEditForm from "@components/Forms/ExperienceForm/ExperienceFormPreview/DetailedExperienceEditForm.jsx";
-import FormActions from "@components/SharedComponents/FormActions.jsx";
+import FormActionsWithAddBtn from "@components/SharedComponents/FormActionsWithAddBtn.jsx";
 
 export default function DetailedExperienceView({ data, onSubmit }) {
   const { formData, setFormData, updateInitialState, handleFormChange, handleFormClear, handleFormReset } =
@@ -52,7 +52,7 @@ export default function DetailedExperienceView({ data, onSubmit }) {
         {isFormOpen ? (
           <form id="bullet-form" onSubmit={handleSubmit}>
             <DetailedExperienceEditForm formData={formData} onChange={handleFormChange} onRemove={handleBulletRemove} />
-            <FormActions onAddition={handleBulletAddition} onClear={handleFormClear} onCancel={handleCancel} />
+            <FormActionsWithAddBtn onAddition={handleBulletAddition} onClear={handleFormClear} onCancel={handleCancel} />
           </form>
         ) : (
           <div className="bullets-container">

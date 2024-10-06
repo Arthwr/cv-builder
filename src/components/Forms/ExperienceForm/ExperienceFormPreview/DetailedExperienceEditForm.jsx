@@ -1,5 +1,5 @@
-import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
+import SectionButton from "@components/SharedComponents/SectionButton.jsx";
 
 export default function DetailedExperienceEditForm({ formData, onChange, onRemove }) {
   return (

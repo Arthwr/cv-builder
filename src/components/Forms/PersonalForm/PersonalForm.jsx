@@ -1,4 +1,4 @@
-import PersonalFormActions from "@components/Forms/PersonalForm/PersonalFormActions.jsx";
+import FormActions from "@components/SharedComponents/FormActions.jsx";
 import PersonalFormInput from "@components/Forms/PersonalForm/PersonalFormInput.jsx";
 import FormContainer from "@components/SharedComponents/FormContainer.jsx";
 import useFormData from "@hooks/useFormData.js";
@@ -11,7 +11,7 @@ export default function PersonalForm({ onCancel, onSubmit, formInfo }) {
       <FormContainer>
         <form id="personal-form" className="form-group" onSubmit={onSubmit}>
           <PersonalFormInput onChange={handleFormChange} formState={formData} />
-          <PersonalFormActions onCancel={onCancel} onClear={handleFormClear} />
+          <FormActions onCancel={onCancel} onClear={handleFormClear} />
         </form>
       </FormContainer>
     </div>

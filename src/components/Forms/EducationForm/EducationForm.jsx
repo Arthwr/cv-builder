@@ -4,7 +4,7 @@ import removeIconUrl from "@assets/icons/removeSectionIcon.svg";
 import FormContainer from "@components/SharedComponents/FormContainer.jsx";
 import EducationFormInput from "@components/Forms/EducationForm/EducationFormInput.jsx";
 import SectionButton from "@components/SharedComponents/SectionButton.jsx";
-import FormActions from "@components/SharedComponents/FormActions";
+import FormActionsWithAddBtn from "@components/SharedComponents/FormActionsWithAddBtn.jsx";
 
 export default function EducationForm({ data, toggleForm, setData }) {
   const { formData, setFormData, handleFormClear, handleFormReset, handleFormChange } = useFormData(data);
@@ -53,7 +53,7 @@ export default function EducationForm({ data, toggleForm, setData }) {
               />
             </div>
           ))}
-          <FormActions onAddition={handleEduAddition} onClear={handleFormClear} onCancel={handleCancel} />
+          <FormActionsWithAddBtn onAddition={handleEduAddition} onClear={handleFormClear} onCancel={handleCancel} />
         </form>
       </FormContainer>
     </div>

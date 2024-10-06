@@ -110,16 +110,8 @@ const data = {
       year: "2015",
     },
   ],
-  coursework: [
-    { id: "1coursRt", title: "Distributed Systems" },
-    { id: "2coursRt", title: "Deep Learning" },
-    { id: "3coursRt", title: "Pattern Recognition Theory" },
-    { id: "4coursRt", title: "Data Structures" },
-    { id: "5coursRt", title: "Machine Learning" },
-    { id: "6coursRt", title: "Data Science" },
-    { id: "7coursRt", title: "Web Application Development" },
-    { id: "8coursRt", title: "Principles of Software Systems Construction" },
-  ],
+  coursework:
+    "Distributed Systems, Deep Learning, Pattern Recognition Theory, Data Structures, Machine Learning, Data Science, Web Application Development, Principles of Software Systems Construction",
   skills: `Programming Languages: Python, Java, C, C++, Go, JavaScript, TypeScript Software\nTools/Frameworks: Git, AWS, Jira, Django, HTML/CSS, MATLAB, React, Node.js, MongoDB`,
 };
 

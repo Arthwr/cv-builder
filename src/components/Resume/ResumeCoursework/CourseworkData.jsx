@@ -1,12 +1,15 @@
-export default function CourseworkData({ coureworkData }) {
+export default function CourseworkData({ courseworkData }) {
+  const formatStringText = (data) => {
+    return data
+      .split(",")
+      .map((item) => item.trim())
+      .join(", ");
+  };
+
   return (
     <div className="coursework">
       <h3>Coursework</h3>
-      <ul>
-        {coureworkData.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
+      <div> {formatStringText(courseworkData)}</div>
     </div>
   );
 }
