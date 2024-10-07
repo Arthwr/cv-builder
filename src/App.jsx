@@ -25,4 +25,5 @@ function App() {
 // 16. Implement restriction on having less then 1 bullet point for position in form
 // 17. Bring form button shouldn't clickable while invisible
 // 20. Local storage save ?
+// 21. Maybe a unified button to bring up all forms at once?
 export default App;

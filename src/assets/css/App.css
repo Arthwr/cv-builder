@@ -308,20 +308,18 @@ main {
   align-items: center;
 }
 
-.coursework-input{
+.coursework-input,
+.skills-input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
 }
 
-.coursework-input textarea {
-  padding: 0.25rem;
-}
-
 .form-input > label,
 .education-input > label,
 .coursework-input > label,
+.skills-input > label,
 .experience-summary-form > label {
   display: flex;
   flex: 1;
@@ -332,6 +330,8 @@ main {
 
 .form-input input,
 .education-input input,
+.skills-input textarea,
+.coursework-input textarea,
 .experience-summary-form input {
   padding: 0.25rem;
 }
