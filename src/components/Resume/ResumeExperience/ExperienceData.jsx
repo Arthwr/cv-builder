@@ -5,7 +5,9 @@ export default function ExperienceData({ experienceData }) {
     <div className="experience">
       <h3>Experience</h3>
       {experienceData.map((item) => (
-        <ExperienceCard key={item.id} data={item} />
+        <div className="no-break" key={item.id}>
+          <ExperienceCard  data={item} />
+        </div>
       ))}
     </div>
   );

@@ -1,20 +1,20 @@
 import { useState } from "react";
-import useToggleForm from "@hooks/useToggleForm";
+import useToggleForm from "@hooks/useToggleForm.js";
 import data from "@data/mockData.js";
 import toggleFormIcon from "@assets/icons/toggleFormIcon.svg";
-import CourseWorkForm from "@components/Forms/CourseworkForm/CourseWorkForm.jsx";
 import ResumeContainer from "@components/SharedComponents/ResumeContainer.jsx";
 import SectionButton from "@components/SharedComponents/SectionButton.jsx";
-import CourseworkData from "@components/Resume/ResumeCoursework/CourseworkData.jsx";
+import ProjectsData from "@components/Resume/ResumeProjects/ProjectsData.jsx";
+import ProjectsForm from "@components/Forms/ProjectsForm/ProjectsForm.jsx";
 
-export default function ResumeCoursework({ isEditMode }) {
-  const [formData, setFormData] = useState(data.coursework);
+export default function ResumeProjects({ isEditMode }) {
+  const [formData, setFormData] = useState(data.projects);
   const [isFormOpen, toggleForm] = useToggleForm();
 
   return (
     <>
       {isFormOpen ? (
-        <CourseWorkForm courseworkData={formData} toggleForm={toggleForm} setFormData={setFormData} />
+        <ProjectsForm projectsData={formData} toggleForm={toggleForm} setFormData={setFormData} />
       ) : (
         <ResumeContainer isEditMode={isEditMode}>
           <SectionButton
@@ -23,7 +23,7 @@ export default function ResumeCoursework({ isEditMode }) {
             label={"toggle form"}
             onClick={toggleForm}
           />
-          <CourseworkData courseworkData={formData} />
+          <ProjectsData data={formData} />
         </ResumeContainer>
       )}
     </>

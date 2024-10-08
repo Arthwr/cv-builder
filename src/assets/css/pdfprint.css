@@ -19,6 +19,10 @@
     display: none;
   }
 
+  .resume-group {
+    padding-top: 1cm;
+  }
+
   .name {
     font-size: 1.7em;
   }
@@ -50,7 +54,7 @@
     font-size: 0.85em;
   }
 
-  li,
+  .projects > div,
   .bullets,
   .skills > div {
     font-size: 0.85em;
@@ -66,15 +70,15 @@
     margin-top: 0.25em;
   }
 
-  .coursework li {
+  .projects div {
     font-weight: 500;
   }
 
   .resume-container:not(:first-child) {
-    margin-top: 0.85em;
+    margin-top: 0.85em !important;
   }
 
-  .coursework ul,
+  .projects ul,
   .skills div,
   .education-info .summary {
     margin-top: 0;
@@ -85,7 +89,7 @@
     margin-bottom: 0.25em;
   }
 
-  .coursework ul {
+  .projects div {
     margin-top: 0;
   }
 

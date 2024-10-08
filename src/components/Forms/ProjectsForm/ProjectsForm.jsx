@@ -1,9 +1,9 @@
 import useFormData from "@hooks/useFormData.js";
 import FormContainer from "@components/SharedComponents/FormContainer.jsx";
-import FormActions from "@components/SharedComponents/FormActions";
+import FormActions from "@components/SharedComponents/FormActions.jsx";
 
-export default function CourseWorkForm({ courseworkData, toggleForm, setFormData }) {
-  const { formData, handleFormChange, handleFormClear } = useFormData(courseworkData);
+export default function ProjectsForm({ projectsData, toggleForm, setFormData }) {
+  const { formData, handleFormChange, handleFormClear } = useFormData(projectsData);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,12 +14,12 @@ export default function CourseWorkForm({ courseworkData, toggleForm, setFormData
   return (
     <div className="separator">
       <FormContainer>
-        <form id="coursework-form" className="form-group" onSubmit={handleSubmit}>
-          <label htmlFor="coursework" className="coursework-input">
-            <span>Coursework:</span>
+        <form id="projects-form" className="form-group" onSubmit={handleSubmit}>
+          <label htmlFor="projects" className="projects-input">
+            <span>Projects:</span>
             <textarea
-              id="coursework"
-              name="coursework"
+              id="projects"
+              name="projects"
               onChange={handleFormChange}
               value={formData}
               type="text"

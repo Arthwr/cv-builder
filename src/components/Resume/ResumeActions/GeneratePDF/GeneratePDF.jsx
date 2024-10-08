@@ -13,6 +13,9 @@ export default function GeneratePDF() {
         scale: 3,
         useCORS: true,
       },
+      pagebreak: {
+        mode: ["css"],
+      },
     };
 
     html2pdf()

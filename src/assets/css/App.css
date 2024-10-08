@@ -152,26 +152,17 @@ main {
   padding-right: 10px;
 }
 
-/* Coursework & Skills */
-.coursework ul,
+/* Projects & Skills */
+.projects div,
 .skills div {
   margin-top: 0.5rem;
   max-width: 120ch;
 }
 
-.coursework li {
+.projects > div {
   display: inline;
   font-family: "source_sans_prosemibold", "system-ui", "sans-serif";
   font-weight: 600;
-}
-
-.coursework li:not(:last-child):after {
-  content: ",";
-  margin-right: 0.25rem;
-}
-
-.coursework li:last-child::after {
-  content: ".";
 }
 
 .skills > div {
@@ -308,7 +299,7 @@ main {
   align-items: center;
 }
 
-.coursework-input,
+.projects-input,
 .skills-input {
   display: flex;
   flex-direction: column;
@@ -318,7 +309,7 @@ main {
 
 .form-input > label,
 .education-input > label,
-.coursework-input > label,
+.projects-input > label,
 .skills-input > label,
 .experience-summary-form > label {
   display: flex;
@@ -331,7 +322,7 @@ main {
 .form-input input,
 .education-input input,
 .skills-input textarea,
-.coursework-input textarea,
+.projects-input textarea,
 .experience-summary-form input {
   padding: 0.25rem;
 }
@@ -534,6 +525,11 @@ fieldset {
   transform: translateX(21px);
 }
 
+/* Page break behaviour */
+.no-break {
+  break-inside: avoid;
+}
+
 @media screen and (max-width: 1025px) {
   .form-wrapper > .form-group {
     padding: 1rem;
@@ -569,6 +565,10 @@ fieldset {
     padding-bottom: 1.3cm;
   }
 
+  .resume-container:not(:first-child) {
+    margin-top: 0.5em;
+  }
+
   .name {
     font-size: 1.7em;
   }
@@ -595,7 +595,7 @@ fieldset {
     font-size: 0.85em;
   }
 
-  li,
+  .projects > div,
   .bullets,
   .skills > div {
     font-size: 0.85em;
@@ -612,12 +612,12 @@ fieldset {
   }
 
   .education,
-  .coursework,
+  .projects,
   .skills {
     margin-top: 0.45em;
   }
 
-  .coursework ul,
+  .projects div,
   .skills div,
   .education-info .summary {
     margin-top: 0;
@@ -628,7 +628,7 @@ fieldset {
     margin-bottom: 0.25em;
   }
 
-  .coursework ul {
+  .projects div {
     margin-top: 0;
   }
 
