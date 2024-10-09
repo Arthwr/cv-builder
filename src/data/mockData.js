@@ -1,9 +1,9 @@
 const data = {
   personal: {
-    firstName: "Arthur",
+    firstName: "John",
     lastName: "Bloomberg",
     location: "New York City",
-    email: "arthurbloomberg@gmail.com",
+    email: "johnbloomberg@gmail.com",
     phone: "01062375053",
     linkedin: "in/bloomberg",
   },
