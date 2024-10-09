@@ -402,12 +402,14 @@ td {
 
 .bullets-preview .bullets-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .bullets-preview ul {
-  display: block;
-  max-width: 100ch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 120ch;
   list-style-type: disc;
 }
 
@@ -417,6 +419,10 @@ td {
 }
 
 /* Experience bullet form */
+table ul li {
+  text-align: left;
+}
+
 fieldset {
   border: none;
   margin-bottom: 1rem;
@@ -525,9 +531,33 @@ fieldset {
   transform: translateX(21px);
 }
 
+/* Utility */
+button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.disabled:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: none;
+  background-color: var(--button);
+}
+
 /* Page break behaviour */
 .no-break {
   break-inside: avoid;
+}
+
+@media screen and (max-width: 1350px) {
+  .bullets-preview {
+    padding: 1rem 0.5rem;
+  }
+
+  .bullets-preview li {
+    list-style-position: inside;
+  }
 }
 
 @media screen and (max-width: 1025px) {

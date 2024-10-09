@@ -1,6 +1,6 @@
 import html2pdf from "html2pdf.js";
 
-export default function GeneratePDF() {
+export default function GeneratePDF({ isEditMode }) {
   const generatePDF = () => {
     const resumeElement = document.getElementById("resume");
 
@@ -28,7 +28,13 @@ export default function GeneratePDF() {
   };
 
   return (
-    <button id="pdf" onClick={generatePDF} aria-label="download pdf">
+    <button
+      className={isEditMode ? "disabled" : ""}
+      id="pdf"
+      onClick={generatePDF}
+      aria-label="download pdf"
+      disabled={isEditMode}
+    >
       Download PDF
     </button>
   );

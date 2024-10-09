@@ -14,7 +14,7 @@ export default function Resume() {
 
   return (
     <main>
-      <ResumeActions toggleEditing={toggleEditing} />
+      <ResumeActions isEditMode={isEditMode} toggleEditing={toggleEditing} />
       <div className="resume-background">
         <div id="resume">
           <AccentColor />
